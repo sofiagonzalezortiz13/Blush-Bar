@@ -29,19 +29,19 @@ export const Footer = () => {
 
   return (
     <Box sx={{ bgcolor: 'white', width: '100%', mt: 'auto' }}>
-      
+
       {/* --- LOGO SUPERIOR --- */}
       <Box sx={{ textAlign: 'center', py: 4 }}>
-        <img 
-          src={logoBlush} 
-          alt="Blush-Bar" 
-          style={{ 
-            width: '180px', 
-            height: 'auto', 
+        <img
+          src={logoBlush}
+          alt="Blush-Bar"
+          style={{
+            width: '180px',
+            height: 'auto',
             marginBottom: '5px',
             display: 'block',
-            margin: '0 auto' 
-          }} 
+            margin: '0 auto'
+          }}
         />
         <Typography variant="caption" display="block" sx={{ color: '#666', fontStyle: 'italic', fontSize: '0.8rem' }}>
           El secreto de la belleza es ser tú misma
@@ -49,27 +49,46 @@ export const Footer = () => {
       </Box>
 
       {/* --- ZONA ROSA (FRANJA DELGADA HORIZONTAL) --- */}
-      <Box sx={{ 
-        bgcolor: '#fce4ec', 
-        pt: 5, pb: 6, 
+      <Box sx={{
+        bgcolor: '#fce4ec',
+        pt: 5, pb: 6,
         px: { md: 12, xs: 3 },
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
         justifyContent: 'space-between',
         alignItems: 'flex-start'
       }}>
-        
+
         {/* BLOQUE 1: LINKS DE INTERÉS */}
         <Box>
           <Typography sx={titleStyle}>LINKS DE INTERÉS</Typography>
+            <Link
+              href="https://github.com/sofiagonzalezortiz13/Blush-Bar"
+              target="_blank"
+              rel="noopener"
+              fontWeight={'bold'}
+              sx={linkStyle}
+            >
+              Repositorio del Proyecto
+            </Link>
+
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            {['¿Qué es Blush-Bar?', 'Nuestra Historia', 'Nuestras Tiendas', '100% Original', 'Trabaja con Nosotros', 'Preguntas Frecuentes', 'Términos y Condiciones', 'Mi Cuenta'].map(text => (
+            {[
+              '¿Qué es Blush-Bar?',
+              'Nuestra Historia',
+              'Nuestras Tiendas',
+              '100% Original',
+              'Trabaja con Nosotros',
+              'Preguntas Frecuentes',
+              'Términos y Condiciones',
+              'Mi Cuenta'
+            ].map(text => (
               <Link key={text} href="#" sx={linkStyle}>{text}</Link>
             ))}
           </Box>
         </Box>
 
-        {/* BLOQUE 2: SERVICIOS (Alineado pero sin título) */}
+        {/* BLOQ  UE 2: SERVICIOS (Alineado pero sin título) */}
         <Box sx={{ mt: { xs: 3, md: 4.2 } }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             {['Agenda Tu Clase', 'Tutoriales', 'Puntos Glow', 'Recicla con Blush-Bar', 'Marcas Cruelty Free', 'Recoge en Tienda', 'Maquillaje de Cumpleaños'].map(text => (
@@ -104,22 +123,22 @@ export const Footer = () => {
 
           {/* Formulario de suscripción manual para look exacto */}
           <Box sx={{ display: 'flex', mb: 1.5, height: '38px', border: '1px solid #ccc', bgcolor: 'white' }}>
-            <input 
-              placeholder="Ingresa tu dirección de email" 
-              style={{ 
-                flexGrow: 1, 
-                border: 'none', 
-                padding: '0 12px', 
+            <input
+              placeholder="Ingresa tu dirección de email"
+              style={{
+                flexGrow: 1,
+                border: 'none',
+                padding: '0 12px',
                 fontSize: '0.75rem',
                 outline: 'none',
                 width: '100%'
-              }} 
+              }}
             />
-            <button style={{ 
-              backgroundColor: '#4d4d4d', 
-              color: 'white', 
-              border: 'none', 
-              padding: '0 20px', 
+            <button style={{
+              backgroundColor: '#4d4d4d',
+              color: 'white',
+              border: 'none',
+              padding: '0 20px',
               cursor: 'pointer',
               fontWeight: '600',
               fontSize: '0.8rem'
@@ -136,14 +155,14 @@ export const Footer = () => {
           <Typography sx={{ fontSize: '0.75rem', fontWeight: 700, textAlign: 'center', mb: 1.5, color: '#333' }}>
             SÍGUENOS EN
           </Typography>
-          
+
           {/* Iconos de Redes con el círculo negro */}
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
             <IconButton size="small" sx={{ border: '1.5px solid black', p: 0.5, color: 'black' }}>
               <InstagramIcon sx={{ fontSize: 18 }} />
             </IconButton>
             <IconButton size="small" sx={{ border: '1.5px solid black', p: 0.5, color: 'black' }}>
-               <Typography sx={{ fontWeight: '900', fontSize: '14px', fontFamily: 'sans-serif' }}>J</Typography>
+              <Typography sx={{ fontWeight: '900', fontSize: '14px', fontFamily: 'sans-serif' }}>J</Typography>
             </IconButton>
             <IconButton size="small" sx={{ border: '1.5px solid black', p: 0.5, color: 'black' }}>
               <FacebookIcon sx={{ fontSize: 18 }} />
